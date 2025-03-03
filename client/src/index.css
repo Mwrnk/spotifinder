@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Estilos personalizados para o aplicativo */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-full font-bold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-spotify-green text-white hover:bg-opacity-80;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-spotify-black hover:bg-spotify-lightgray;
+  }
+  
+  .card {
+    @apply bg-[#282828] p-4 rounded-lg shadow-lg;
+  }
+  
+  .input {
+    @apply bg-[#282828] border border-spotify-gray rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-spotify-green;
+  }
+}
